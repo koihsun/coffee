@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>產品明細</title>
+  <!-- font-awesome icon -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Material icon -->
+  <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- vendor -->
+    <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@5.0.0/css/swiper.min.css">
+    <!-- animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <!-- Header START -->
+    <!-- nav top -->
+  <div class="nav__top d-none d-lg-block">
+    <div class="container">
+      <div class="row">
+        <div class="d-none d-lg-block offset-lg-9 col-lg-3 ">
+          <ul class="list-unstyled d-flex justify-content-end">
+            <li class="mr-3">
+              <a class="d-flex align-items-center"  href="#cartModal" data-toggle="modal" data-target="#cartModal" title="購物車">
+                <span class="material-icons nav__icon">
+                  shopping_cart
+                </span>
+                <span class="small">( 0 件商品 $0	 )</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="會員">
+                <span class="material-icons nav__icon">
+                  person
+                </span>
+                <span class="small">李 鯉魚</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="login.html">登出</a>
+                <a class="dropdown-item" href="login.html">會員註冊</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- nav top -->
+    <!-- header content -->
+  <header class="nav__content" id="navigation">
+    <div class="container-fluid container-md">
+      <nav class="navbar navbar-expand-lg navbar-light px-0 py-2 py-md-3">
+        <!-- hamburger -->
+        <button class="navbar-toggler border-0 py-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- hamburger -->
+        <!-- logo -->
+        <a class="navbar-brand d-lg-none" href="index.html">
+          <img class="nav__logo" src="./assets/images/logo.png" alt="Logo">
+        </a>
+        <!-- logo -->
+        <a class="d-lg-none"  href="#exampleModal" data-toggle="modal" data-target="#exampleModal">
+          <span class="material-icons text-primary">
+            shopping_cart
+          </span>
+        </a>
+        <!-- menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav nav__menu--mobile .align-items-start align-items-md-center">
+            <li class="nav-item mx-4">
+              <a class="nav-link nav__item nav__item--active" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link nav__item" href="product.html">商品列表</a>
+            </li>
+            <li class="nav-item mx-4 d-none d-lg-block">
+              <a class="nav-link" href="index.html">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo">
+              </a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link nav__item" href="about.html">關於我們</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link nav__item" href="contact.html">訂購 Q&A</a>
+            </li>
+          </ul>
+        </div>
+        <!-- menu -->
+      </nav>
+    </div>
+  </header>
+   <!-- header content -->
+  <!-- Header END -->
+
+  <!-- Content START -->
+  <main>
+    <section class="section product">
+    <div class="container">
+        <!-- 麵包屑 START -->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent p-0 pb-3">
+                    <li class="breadcrumb-item text-secondary"><a href="index.html">首頁</a></li>
+                    <li class="breadcrumb-item text-secondary"><a href="product.html">商品列表</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">商品介紹</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- 麵包屑 END -->
+
+        <div class="product-detail__block">
+            <div class="product-detail__top">
+                <div class="product-detail__img">
+                    <div class="bg-image" style="background-image: url('assets/images/index/bean_01.jpg');"></div>
+                </div>
+                <div class="product-detail__info">
+                    <h1 class="product-detail__name">
+                        阿拉比卡
+                    </h1>
+<!-- 
+                    <div class="product-detail__detail">
+                        <div class="product-detail__detail-list product-detail__detail-list--brand">
+                            <p>品牌<span>Doppelherz</span></p>
+                        </div>
+                        <div class="product-detail__detail-list">
+                            <p>產地<span>德國</span></p>
+                        </div>
+                        <div class="product-detail__detail-list">
+                            <p>有效期限：2022-02</p>
+                        </div>
+                    </div>
+ -->
+                    <div id="product-detail__price" class="product-detail__price product-detail__price--special">
+                        <span class="product-detail__oldprice">$330</span>$<span id="original_price">270</span>
+                    </div>
+                    <div class="product-detail__model">
+                        <div class="product-detail__title">規格</div>
+                        <select class="product-detail__select">
+                            <option value="">請選擇</option>
+                            <option value="1">300g</option>
+                        </select>
+                    </div>
+                    <div class="product-detail__qty">
+                        <div class="product-detail__title">數量</div>
+                        <div class="product-detail__qty-controll">
+                            <a class="product-detail__qty-less disable"></a>
+                            <input type="text" id="products_quantity-number" class="product-detail__qty-amount" value="1">
+                            <a class="product-detail__qty-add"></a>
+                        </div>
+                        <div class="product-detail__qty-stock">庫存：20包</div>
+                    </div>
+                    <div class="product-detail__btnbox">
+                        <a href="" class="detail__add2cart btn btn-outline-primary col-6 col-md-4 mr-md-3">加入購物車</a>
+                        <a href="" class="detail__go2cart btn btn-primary col-6 col-md-4">直接購買</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </main>
+  <!-- Content END -->
+
+  <!-- Footer START -->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="footer-copyright__block">
+          <div class="footer-copyright__item">
+            <p class="small">COPYRIGHT © 2020. ALL RIGHTS RESERVED. DESIGN BY Jamie & Mona</p>
+          </div>
+          <!--/ footer social -S -->
+          <ul class="footer-copyright__item list-unstyled d-flex justify-content-between">
+            <li>
+              <a title="Facebook" href="https://facebbok.com/">
+                <img src="assets/images/icon/footer-icon--fb.png">
+              </a>
+            </li>
+            <li>
+              <a title="Line" href="#">
+                <img src="assets/images/icon/footer-icon--line.png">
+              </a>
+            </li>
+            <li>
+              <a title="Instagram" href="#">
+                <img src="assets/images/icon/footer-icon--instagram.png">
+              </a>
+            </li>
+            <li>
+              <a title="Linkdin" href="https://github.com/">
+                <img src="assets/images/icon/footer-icon--git hub.png">
+              </a>
+            </li>
+          </ul>
+        <!--/ footer social -E -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer END -->
+
+  <!-- 購物車 Modal -->
+  <div class="modal pr-0" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog m-0 ml-sm-auto h-100" role="document">
+      <div class="modal-content h-100">
+        <!-- Modal header -->
+        <div class="modal-header pb-0 pb-2 px-3 px-lg-7 border-0">
+          <h4 class="modal-title font-lg-xxl" id="cartModalLabel">購物車<sup class="text-secondary">3</sup> </h4>
+          <button type="button" class="close font-xl font-lg-xxl" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body px-3 px-lg-7 flex-lg-grow-0">
+          <!-- 主要內容 -->
+          <ul class="list-unstyled mb-3">
+            <li class="media align-items-stretch position-relative mb-2">
+              <button type="button" class="cart__clear btn"></button>
+              <div class="cart__image bg-outer">
+                <div class="bg-image" style="background-image: url('assets/images/index/bean_01.jpg');"></div>
+              </div>
+              <div class="media-body bg-light p-2 px-lg-3">
+                <h6 class="mb-0">阿拉比卡</h6>
+                <div class="mb-lg-3">
+                  <span class="mr-2 small">NT$1,080</span><span class="cart__origin small">NT$1,1200</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light p-0 mr-4">
+                      <span class="material-icons">
+                        remove
+                      </span>
+                    </button>
+                    <div class="bg-light text-weight-bold">1</div>
+                    <button type="button" class="btn btn-light p-0 ml-4">
+                      <span class="material-icons">
+                        add
+                      </span>
+                    </button>
+                  </div>
+                  <h6>NT$1,080</h6>
+                </div>
+              </div>
+            </li>
+            <li class="media align-items-stretch position-relative">
+              <button type="button" class="cart__clear btn"></button>
+              <div class="cart__image bg-outer">
+                <div class="bg-image" style="background-image: url('assets/images/index/bean_04.jpg');"></div>
+              </div>
+              <div class="media-body bg-light p-2 px-lg-3">
+                <h6 class="mb-0">耶加雪菲</h6>
+                <div class="mb-lg-3">
+                  <span class="mr-2 small">NT$1,800</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light p-0 mr-4">
+                      <span class="material-icons">
+                        remove
+                      </span>
+                    </button>
+                    <div class="bg-light text-weight-bold">2</div>
+                    <button type="button" class="btn btn-light p-0 ml-4">
+                      <span class="material-icons">
+                        add
+                      </span>
+                    </button>
+                  </div>
+                  <h6>NT$3,600</h6>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- 主要內容 -->
+          <div class="d-flex justify-content-between cart__price">
+            <div class="title">
+              <div class="text-muted mb-3">小計</div>
+              <div class="text-muted mb-4">運費</div>
+              <h4>總金額</h4>
+            </div>
+            <div class="text-right">
+              <div class="text-muted mb-3">NT$4,680</div>
+              <div class="text-muted mb-4">NT$80</div>
+              <h4>NT$4,760</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer px-3 px-lg-7 border-0">
+          <a href="checkCart.html" class="btn cart__checkout">前往結帳</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+
+  <!-- Bootstrap 4 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <!-- slick -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper@5.0.0/js/swiper.min.js"> </script>
+  <script src="assets/js/all.js"></script>
+  <!-- custom -->
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

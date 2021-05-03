@@ -1,0 +1,122 @@
+---
+title: 確認商品
+layout: ./app/layout.ejs
+engine: ejs
+current: checkCart
+---
+
+<section class="section cart">
+  <div class="container">
+    <div class="cart__block">
+      <!-- 步驟進度條 START -->
+      <ul class="cartProgress">
+        <!-- 目前頁面class為 active，已完成頁面為 finished -->
+        <li class="cartProgress__step active">
+          <!-- icon -->
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><g><rect fill="none" height="24" width="24"/><path d="M16.54,11L13,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L16.54,11z M11,7H2v2h9V7z M21,13.41L19.59,12L17,14.59 L14.41,12L13,13.41L15.59,16L13,18.59L14.41,20L17,17.41L19.59,20L21,18.59L18.41,16L21,13.41z M11,15H2v2h9V15z"/></g></svg>
+          <p>確認商品</p>
+        </li>
+        <li class="cartProgress__step">
+          <!-- icon -->
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none" fill-rule="evenodd"/><g fill-rule="evenodd"><path d="M9 17l3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4"/><path d="M15.47 20.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"/></g></svg>
+          <p>填寫資料</p>
+        </li>
+        <li class="cartProgress__step">
+          <!-- icon -->
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+          <p>前往付款</p>
+        </li>
+        <li class="cartProgress__step">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+          <p>完成訂購</p>
+        </li>
+      </ul>
+      <!-- 步驟進度條 END -->
+
+      <!-- 訂購項目列表 START -->
+      <div class="cartList">
+        <!-- 標題列 -->
+        <div class="cartList__head">
+          <div class="cartList__head-td">商品</div>
+          <div class="cartList__head-td">數量</div>
+          <div class="cartList__head-td">單價</div>
+          <div class="cartList__head-td">小計</div>
+          <div class="cartList__head-td"></div>
+        </div>
+        <!-- 品項 no.1 -->
+        <div class="cartList__item">
+          <div class="cartList__item-td">
+            <div class="cartList__product">
+              <div class="cartList__product-img" style="background-image: url('assets/images/index/bean_01.jpg');"></div>
+              <div class="cartList__product-info">
+                <p>阿拉比卡</p>
+                <p>300g</p>
+              </div>
+            </div>
+          </div>
+          <div class="cartList__item-td">
+            <div class="cartList__qty">
+              <input type="text" id="quantity" name="quantity" value="1" class="cartList__qty-input">
+            </div>
+          </div>
+          <div class="cartList__item-td">
+            <p class="cartList__price">$300</p>
+          </div>
+          <div class="cartList__item-td">
+            <p class="cartList__total">$300</p>
+          </div>
+          <div class="cartList__item-td">
+            <a class="cartList__delete btn">
+              <span class="material-icons">
+                delete_forever
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- 品項 no.2 -->
+        <div class="cartList__item">
+          <div class="cartList__item-td">
+            <div class="cartList__product">
+              <div class="cartList__product-img" style="background-image: url('assets/images/index/bean_02.jpg');"></div>
+              <div class="cartList__product-info">
+                <p>耶加雪菲</p>
+                <p>300g</p>
+              </div>
+            </div>
+          </div>
+          <div class="cartList__item-td">
+            <div class="cartList__qty">
+              <input type="text" id="quantity" name="quantity" value="4" class="cartList__qty-input">
+            </div>
+          </div>
+          <div class="cartList__item-td">
+            <p class="cartList__price">$300</p>
+          </div>
+          <div class="cartList__item-td">
+            <p class="cartList__total">$1,200</p>
+          </div>
+          <div class="cartList__item-td">
+            <a class="cartList__delete btn">
+              <span class="material-icons">
+                delete_forever
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- 總計金額 -->
+        <div class="cartList__sum">
+          <div class="cartList__sum-title">總計</div>
+          <div class="cartList__sum-price">$1500</div>
+        </div>
+      </div>
+      <!-- 訂購項目列表 END -->
+
+      <!-- 上一步/下一步按鈕 START -->
+      <div class="cartBtn mt-7">
+        <a href="product.html" class="cartBtn__prev btn btn-outline-primary col-12 col-md-2">重新選購</a>
+        <a href="checkPayment.html" class="cartBtn__next btn btn-primary col-12 col-md-2">下一步</a>
+      </div>
+      <!-- 上一步/下一步按鈕 END -->
+    </div>
+  </div>
+</section>

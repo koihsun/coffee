@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'SF Pro TC', 'SF Pro Text', 'PingFang TC', 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main {
+    flex-grow: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+ul, p {
+    margin-bottom: 0;
+    padding: 0;
+}
+.section {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+        margin-top: 4rem;
+    }
+}
+a {
+    color: $gray-800;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0px 2px #fff, 0 0 0px 3px rgba(theme-color("primary"), .5);
+}
+.breadcrumb-item {
+    font-size: .825rem;
+    &.active {
+        font-weight: bold;
+        color: $black;
+    }
+    +.breadcrumb-item::before {
+        content: ">";
+    }
+}

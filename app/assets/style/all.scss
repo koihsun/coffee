@@ -1,0 +1,15 @@
+// bootstrap
+@import "./node_modules/bootstrap/scss/functions";
+@import "variables"; // 複製一份 variable 來覆蓋
+@import "./node_modules/bootstrap/scss/bootstrap";
+// base
+@import "base";
+// utility
+@import "utilities";
+// all
+@import "layout/header";
+@import "layout/footer";
+@import "page/login";
+@import "page/cart";
+@import "page/index";
+@import "page/product";

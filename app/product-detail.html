@@ -1,0 +1,72 @@
+---
+title: 產品明細
+layout: ./app/layout.ejs
+engine: ejs
+current: product-dateil
+---
+<section class="section product">
+    <div class="container">
+        <!-- 麵包屑 START -->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent p-0 pb-3">
+                    <li class="breadcrumb-item text-secondary"><a href="index.html">首頁</a></li>
+                    <li class="breadcrumb-item text-secondary"><a href="product.html">商品列表</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">商品介紹</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- 麵包屑 END -->
+
+        <div class="product-detail__block">
+            <div class="product-detail__top">
+                <div class="product-detail__img">
+                    <div class="bg-image" style="background-image: url('assets/images/index/bean_01.jpg');"></div>
+                </div>
+                <div class="product-detail__info">
+                    <h1 class="product-detail__name">
+                        阿拉比卡
+                    </h1>
+<!-- 
+                    <div class="product-detail__detail">
+                        <div class="product-detail__detail-list product-detail__detail-list--brand">
+                            <p>品牌<span>Doppelherz</span></p>
+                        </div>
+                        <div class="product-detail__detail-list">
+                            <p>產地<span>德國</span></p>
+                        </div>
+                        <div class="product-detail__detail-list">
+                            <p>有效期限：2022-02</p>
+                        </div>
+                    </div>
+ -->
+                    <div id="product-detail__price" class="product-detail__price product-detail__price--special">
+                        <span class="product-detail__oldprice">$330</span>$<span id="original_price">270</span>
+                    </div>
+                    <div class="product-detail__model">
+                        <div class="product-detail__title">規格</div>
+                        <select class="product-detail__select">
+                            <option value="">請選擇</option>
+                            <option value="1">300g</option>
+                        </select>
+                    </div>
+                    <div class="product-detail__qty">
+                        <div class="product-detail__title">數量</div>
+                        <div class="product-detail__qty-controll">
+                            <a class="product-detail__qty-less disable"></a>
+                            <input type="text" id="products_quantity-number" class="product-detail__qty-amount" value="1">
+                            <a class="product-detail__qty-add"></a>
+                        </div>
+                        <div class="product-detail__qty-stock">庫存：20包</div>
+                    </div>
+                    <div class="product-detail__btnbox">
+                        <a href="" class="detail__add2cart btn btn-outline-primary col-6 col-md-4 mr-md-3">加入購物車</a>
+                        <a href="" class="detail__go2cart btn btn-primary col-6 col-md-4">直接購買</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

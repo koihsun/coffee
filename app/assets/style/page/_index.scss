@@ -1,0 +1,144 @@
+.mainvision {
+    #skip {
+        border: none;
+        display: block;
+        position: absolute;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
+        height: 1.5rem;
+        z-index: $zindex-modal-backdrop;
+        svg {
+            display: block;
+            margin: 0 auto;
+            width: 3rem;
+            height: 1.5rem;
+            path {
+                fill: hsla(0,0%,100%,.75);
+            }
+        }
+    }
+    .carousel {
+        &__image {
+            height: calc(100vh - 68px);
+            @include media-breakpoint-up(lg) {
+                height: calc(100vh - 127px);
+            }
+        }
+    
+        &__content {
+            font-size: 2rem !important;
+            @include media-breakpoint-up(md) {
+                font-size: 3rem !important;
+            }
+        }
+    }
+}
+
+.bg-coffeebean {
+    background-image: url(../images/index/bean_05.jpg);
+}
+.bg-linear {
+    background: linear-gradient(to left, rgba(0, 0, 0, .95) 50%, transparent);
+}
+.secBanner {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sectionTitle {
+    display: flex;
+    flex-flow: column;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto 30px;
+    &::before, &::after  {
+        content: "";
+        border: 0;
+        border-top: 1px #000;
+        border-bottom: 1px #000;
+        border-style: solid;
+        height: 3px;
+    }
+}
+
+
+.roast {
+    &__bg {
+        width: 100%;
+        height: 134px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include media-breakpoint-up(sm) {
+            height: 168px;
+        }
+        @include media-breakpoint-up(md) {
+            height: 320px;
+        }
+    }
+
+    &__title {
+        position: absolute !important;
+        /*left: 50%;
+        top: 50%;
+        transform: translate(-100%, -50%);*/
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        font-size: 1.75rem;
+        font-weight: bold;
+        font-style: italic;
+        color: #ff0000;
+
+        @include media-breakpoint-up(sm) {
+            position: relative !important;
+            height: auto;
+            color: $primary;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
+            justify-content: flex-start;
+        }
+
+        img {
+            min-width: 32px;
+        }
+    }
+
+    li:nth-of-type(even) {
+        @include media-breakpoint-up(md) {
+            flex-direction: row-reverse;
+
+            .roast__title{
+                justify-content: flex-end;
+            }
+        }
+
+    }
+    .roast__bg{
+        &:nth-of-type(1) {
+            background: linear-gradient(0deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_01.jpg) right center /cover no-repeat;
+            @include media-breakpoint-up(md) {
+                background: linear-gradient(-115deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_01.jpg) right center /cover no-repeat;
+            }
+        }
+        &:nth-of-type(2) {
+            background: linear-gradient(0deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_02.jpg) right center /cover no-repeat;
+            @include media-breakpoint-up(md) {
+                background: linear-gradient(115deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_02.jpg) right center /cover no-repeat;
+            }
+        }
+        &:nth-of-type(3) {
+            background: linear-gradient(0deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_03.jpg) right center /cover no-repeat;
+            @include media-breakpoint-up(md) {
+                background: linear-gradient(-115deg, #fff 50%, transparent 50%) center center / 100% 100%, url(../images/index/bean_03.jpg) right center /cover no-repeat;
+            }
+        }
+    }
+}

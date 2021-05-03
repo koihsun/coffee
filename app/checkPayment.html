@@ -1,0 +1,203 @@
+---
+title: 填寫資料
+layout: ./app/layout.ejs
+engine: ejs
+current: checkPayment
+---
+
+<section class="section cart">
+  <div class="container">
+    <div class="cart__block">
+      <!-- 步驟進度條 START -->
+      <ul class="cartProgress">
+        <!-- 目前頁面class為 active，已完成頁面為 finished -->
+        <li class="cartProgress__step finished">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><g><rect fill="none" height="24" width="24"/><path d="M16.54,11L13,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L16.54,11z M11,7H2v2h9V7z M21,13.41L19.59,12L17,14.59 L14.41,12L13,13.41L15.59,16L13,18.59L14.41,20L17,17.41L19.59,20L21,18.59L18.41,16L21,13.41z M11,15H2v2h9V15z"/></g></svg>
+          <p>確認商品</p>
+        </li>
+        <!-- 目前頁面class為 active，已完成頁面為 finished -->
+        <li class="cartProgress__step active">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none" fill-rule="evenodd"/><g fill-rule="evenodd"><path d="M9 17l3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4"/><path d="M15.47 20.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"/></g></svg>
+          <p>填寫資料</p>
+        </li>
+        <li class="cartProgress__step">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+          <p>前往付款</p>
+        </li>
+        <li class="cartProgress__step">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="48px" height="48px"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
+          <p>完成訂購</p>
+        </li>
+      </ul>
+      <!-- 步驟進度條 END -->
+
+      <div class="row">
+        <div class="col-12 col-md-5 mb-3">
+          <div class="cart__body">
+            <!-- 主要內容 -->
+            <ul class="list-unstyled mb-3">
+              <li class="d-flex align-items-stretch position-relative mb-2">
+                <div class="cart__image bg-outer">
+                  <div class="bg-image" style="background-image: url('assets/images/index/bean_01.jpg');"></div>
+                </div>
+                <div class="media-body px-2 px-lg-3">
+                  <h5 class="mb-0">阿拉比卡</h5>
+                  <sub class="small text-muted">數量 1</sub>
+                </div>
+                <p class="m-auto">NT$300</p>
+              </li>
+              <li class="d-flex align-items-stretch position-relative">
+                <div class="cart__image bg-outer">
+                  <div class="bg-image" style="background-image: url('assets/images/index/bean_04.jpg');"></div>
+                </div>
+                <div class="media-body px-2  px-lg-3">
+                  <h5 class="mb-0">耶加雪菲</h5>
+                  <sub class="small text-muted">數量 4</sub>
+                </div>
+                <p class="m-auto">NT$1,200</p>
+              </li>
+            </ul>
+            <!-- 計算金額 -->
+            <div class="cart__price">
+              <div class="title">
+                <div class="text-muted mb-3">小計</div>
+                <div class="text-muted mb-3">運費</div>
+              </div>
+              <div class="text-right">
+                <div class="text-muted mb-3">NT$1,500</div>
+                <div class="text-muted mb-3">NT$80</div>
+              </div>
+            </div>
+            <!-- 總金額 -->
+            <div class="cart__total">
+              <div class="title">
+                <h5 class="text-warning">總金額</h5>
+              </div>
+              <div class="text-right">
+                <h5 class="text-warning">NT$1,580</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7">
+          <!-- 訂購資料 START -->
+          <form class="cartPayment">
+            <div class="cartPayment__block">
+              <h6 class="cartPayment__title">付款方式</h6>
+              <div class="cartPayment__content">
+                <div class="custom-control custom-radio pl-0">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label cartPayment__custom--label font-weight-bold" for="customRadio1">
+                    信用卡付款</label>
+                </div>
+                <div class="custom-control custom-radio pl-0">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label cartPayment__custom--label font-weight-bold" for="customRadio2">ATM轉帳</label>
+                </div>
+                <div class="custom-control custom-radio pl-0">
+                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label cartPayment__custom--label font-weight-bold" for="customRadio3">貨到付款</label>
+                </div>
+              </div>
+            </div>
+            <div class="cartPayment__block">
+              <h6 class="cartPayment__title">配送方式</h6>
+              <div class="cartPayment__content">
+                <div class="custom-control custom-radio pl-0">
+                  <input type="radio" id="deliveryRadio1" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label  cartPayment__custom--label font-weight-bold" for="deliveryRadio1">
+                    超商取貨</label>
+                </div>
+                <div class="custom-control custom-radio pl-0">
+                  <input type="radio" id="deliveryRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label  cartPayment__custom--label font-weight-bold" for="deliveryRadio2">黑貓宅急便</label>
+                </div>
+              </div>
+            </div>
+            <div class="cartPayment__block">
+              <h6 class="cartPayment__title">收件人資料</h6>
+              <div class="cartPayment__content">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputName">姓名</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="填寫姓名">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPhone">手機號碼</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="填寫電話號碼">
+                  </div>
+                </div>
+                <!-- E-mail -->
+                <div class="form-group">
+                  <label for="inputEmail">E-mail</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="填寫信箱地址">
+                </div>
+                <!-- E-mail -->
+                <!-- 地址資訊 -->
+                <div class="form-row">
+                  <div class="form-group col-md-5" data-role="county">
+                    <label for="inputCounty">縣市</label>
+                    <select name="county" id="inputCounty" class="form-control">
+                      <option value="">縣市</option>
+                      <option value="基隆市">基隆市</option>
+                      <option value="台北市">台北市</option>
+                      <option value="新北市">新北市</option>
+                      <option value="宜蘭縣">宜蘭縣</option>
+                      <option value="新竹市">新竹市</option>
+                      <option value="新竹縣">新竹縣</option>
+                      <option value="桃園市">桃園市</option>
+                      <option value="苗栗縣">苗栗縣</option>
+                      <option value="台中市">台中市</option>
+                      <option value="彰化縣">彰化縣</option>
+                      <option value="南投縣">南投縣</option>
+                      <option value="嘉義市">嘉義市</option>
+                      <option value="嘉義縣">嘉義縣</option>
+                      <option value="雲林縣">雲林縣</option>
+                      <option value="台南市">台南市</option>
+                      <option value="高雄市">高雄市</option>
+                      <option value="屏東縣">屏東縣</option>
+                      <option value="台東縣">台東縣</option>
+                      <option value="花蓮縣">花蓮縣</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-5" data-role="district">
+                    <label for="inputDistrict">鄉鎮市區</label>
+                    <select name="district" id="inputDistrict" class="form-control">
+                      <option value="">鄉鎮市區</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputPostalCode">郵遞區號</label>
+                    <input type="text" class="form-control" id="inputPostalCode" placeholder="例：22177">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="inputAddress">地址</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="填寫地址">
+                  </div>
+                </div>
+                <!-- 地址資訊 -->
+                <!-- 發票資訊 -->
+                <div class="form-group">
+                  <label for="inputInvoice">發票及備註</label>
+                  <input type="text" class="form-control" id="inputInvoice" placeholder="填寫發票及備註">
+                </div>
+                <!-- 發票資訊 -->
+              </div>
+            </div>
+
+            <!-- 上一步/下一步按鈕 START -->
+            <div class="cartBtn mt-7">
+              <a href="checkCart.html" class="cartBtn__prev btn btn-outline-primary col-12 col-md-2">上一步</a>
+              <a href="checkOrder.html" class="cartBtn__next btn btn-primary col-12 col-md-2">下一步</a>
+              <!-- 
+                <button type="submit" class="cartBtn__next btn btn-primary col-12 col-md-2">下一步</button>
+              -->
+            </div>
+            <!-- 上一步/下一步按鈕 END -->
+          </form>
+          <!-- 訂購資料 END -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
