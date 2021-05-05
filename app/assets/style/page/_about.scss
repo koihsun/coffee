@@ -1,0 +1,23 @@
+.about {
+    .bg-image {
+        height: 244px;
+        border-radius: 2px;
+        @include media-breakpoint-up(lg) {
+            height: 400px;
+        }
+    }
+
+    .row:nth-of-type(2) {
+        @include media-breakpoint-up(lg) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+    }
+
+    .row ~ .row {
+        margin-bottom: 0.5rem;
+        @include media-breakpoint-up(lg) {
+            margin-top: 2rem;
+        }
+    }
+}

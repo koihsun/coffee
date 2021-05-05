@@ -1,29 +1,21 @@
 .login {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
-    background-color: #e6e7e9;
-    overflow: hidden;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.05) 50%, transparent);
+    @include media-breakpoint-up(md) {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 50%, transparent);
+    }
 
-    &::before {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 1000px;
-        display: block;
-        background-image: url(../images/login.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+    .bg-fixed {
+        @include media-breakpoint-down(md) {
+            opacity: 0.2;
+        }
     }
-    &__block {
-        width: 250px;
-        padding: 1.5rem;
-        margin-top: 100px;
-        border-radius: 10px;
-        /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.12); */
-        z-index: $zindex-sticky;
+    .bg-fixed > div {
+        background-position: right bottom;
     }
+}
+.bg-login {
+    background-image: url(../images/login_bg.png);
 }
